@@ -11,6 +11,7 @@ namespace Samples.Npgsql
     {
         private static async Task Main()
         {
+            /*
             using (var connection = CreateConnection())
             {
                 var testQueries = new RelationalDatabaseTestHarness<NpgsqlConnection, NpgsqlCommand, NpgsqlDataReader>(
@@ -21,8 +22,26 @@ namespace Samples.Npgsql
                     (command, behavior) => command.ExecuteReader(behavior),
                     command => command.ExecuteNonQueryAsync(),
                     command => command.ExecuteScalarAsync(),
-                    executeReaderAsync: null,
-                    executeReaderWithBehaviorAsync: null
+                    command => command.ExecuteReaderAsync(),
+                    (command, behavior) => command.ExecuteReaderAsync(behavior)
+                );
+
+                await testQueries.RunAsync();
+            }
+            */
+
+            using (var connection = CreateConnection())
+            {
+                var testQueries = new RelationalDatabaseTestHarness<NpgsqlConnection, NpgsqlCommand, DbDataReader>(
+                    connection,
+                    command => command.ExecuteNonQuery(),
+                    command => command.ExecuteScalar(),
+                    command => command.ExecuteReader(),
+                    (command, behavior) => command.ExecuteReader(behavior),
+                    command => command.ExecuteNonQueryAsync(),
+                    command => command.ExecuteScalarAsync(),
+                    command => command.ExecuteReaderAsync(),
+                    (command, behavior) => command.ExecuteReaderAsync(behavior)
                 );
 
                 await testQueries.RunAsync();
