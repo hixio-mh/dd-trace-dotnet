@@ -2024,10 +2024,10 @@
           "signature_types": [
             "System.Threading.Tasks.Task`1<System.Decimal>"
           ],
-          "minimum_major": 0,
-          "minimum_minor": 0,
+          "minimum_major": 2,
+          "minimum_minor": 2,
           "minimum_patch": 0,
-          "maximum_major": 65535,
+          "maximum_major": 2,
           "maximum_minor": 65535,
           "maximum_patch": 65535
         },
@@ -2048,10 +2048,10 @@
           "signature_types": [
             "System.Threading.Tasks.Task`1<Xunit.Sdk.RunSummary>"
           ],
-          "minimum_major": 0,
-          "minimum_minor": 0,
+          "minimum_major": 2,
+          "minimum_minor": 2,
           "minimum_patch": 0,
-          "maximum_major": 65535,
+          "maximum_major": 2,
           "maximum_minor": 65535,
           "maximum_patch": 65535
         },
@@ -2076,10 +2076,10 @@
             "System.Collections.Generic.IEnumerable`1<T>",
             "System.Threading.CancellationTokenSource"
           ],
-          "minimum_major": 0,
-          "minimum_minor": 0,
+          "minimum_major": 2,
+          "minimum_minor": 2,
           "minimum_patch": 0,
-          "maximum_major": 65535,
+          "maximum_major": 2,
           "maximum_minor": 65535,
           "maximum_patch": 65535
         },
